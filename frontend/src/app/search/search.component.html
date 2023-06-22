@@ -1,0 +1,10 @@
+<div class="form-group mx-sm-3 mb-2">
+    <label for="inputRepositoryName">Enter repository name</label>
+    <input type="text" class="form-control" [(ngModel)]="searchKeyword" (keyup.enter)="performSearch()"
+        placeholder="Enter repository name">
+
+</div>
+<button class="search-button btn btn-primary mx-sm-3 mb-2" (click)="performSearch()">Search</button>
+
+
+<app-gallery [repositories]="searchResults" (bookmarkClicked)="handleBookmark($event)"></app-gallery>

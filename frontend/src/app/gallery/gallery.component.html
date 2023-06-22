@@ -1,0 +1,14 @@
+<div class="row">
+    <div class=".col-sm-6" *ngFor="let repo of repositories">
+      <div class="card">
+        <img class="card-img-top" [src]="repo.owner.avatar_url" alt="Owner Avatar">
+        <div class="card-body">
+          <h5 class="card-title">{{ repo.name }}</h5>
+          <button id="btn-bm" class="btn-bookmark" (click)="onBookmarkClick(repo)">
+            <span class="icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
